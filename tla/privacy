@@ -1,1 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — TLA</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap');
 
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #faf9f7;
+      --surface: #ffffff;
+      --border: #e8e4de;
+      --text: #1a1917;
+      --muted: #6b6760;
+      --accent: #2d5a3d;
+      --accent-light: #edf3ef;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 300;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      padding: 0;
+    }
+
+    /* Header */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 2rem 2rem;
+      text-align: center;
+    }
+
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 1.25rem;
+    }
+
+    .app-badge::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+
+    .subtitle {
+      font-size: 0.9375rem;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    /* Layout */
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    /* Summary card */
+    .summary-card {
+      background: var(--accent-light);
+      border: 1px solid #c5d9cb;
+      border-radius: 12px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 3rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .summary-icon {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .summary-icon svg { display: block; }
+
+    .summary-text strong {
+      display: block;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .summary-text p {
+      font-size: 0.875rem;
+      color: #3a6b4a;
+      line-height: 1.6;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 0.875rem;
+    }
+
+    .section-num {
+      font-size: 0.6875rem;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      min-width: 24px;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: var(--text);
+    }
+
+    p {
+      font-size: 0.9375rem;
+      color: #3d3b38;
+      line-height: 1.8;
+      margin-bottom: 0.875rem;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    .note {
+      background: #fdf8f0;
+      border-left: 3px solid #d4a853;
+      padding: 0.875rem 1rem;
+      border-radius: 0 6px 6px 0;
+      margin-top: 1rem;
+      font-size: 0.875rem;
+      color: #7a5a20;
+      font-style: italic;
+    }
+
+    /* Contact block */
+    .contact-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .contact-block p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .contact-block a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-block a:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8125rem;
+      color: var(--muted);
+      background: var(--surface);
+    }
+
+    @media (max-width: 600px) {
+      main { padding: 2rem 1.25rem 4rem; }
+      header { padding: 2rem 1.25rem 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-badge">TLA</div>
+  <h1>Privacy Policy</h1>
+  <p class="subtitle">Effective date: May 1, 2026 &nbsp;·&nbsp; Version 1.0</p>
+</header>
+
+<main>
+
+  <div class="summary-card">
+    <div class="summary-icon">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M5 9l3 3 5-5" stroke="#ffffff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="summary-text">
+      <strong>The short version</strong>
+      <p>TLA does not collect, store, or transmit any personal data. Everything stays on your device. No accounts, no analytics, no tracking — ever.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2>Overview</h2>
+    </div>
+    <p>This Privacy Policy describes how Generabilis Intellectus LLC ("we," "us," or "our") handles information in connection with TLA (the "Application"). We are committed to protecting your privacy. This policy applies to all users of the Application on Apple platforms.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2>Information we do not collect</h2>
+    </div>
+    <p>TLA is designed to operate without collecting personal data. Specifically, the Application does not:</p>
+    <p>· Collect your name, email address, phone number, or any other identifying information<br>
+       · Track your location<br>
+       · Access your contacts, photos, camera, or microphone<br>
+       · Transmit data to our servers or any third-party servers<br>
+       · Use cookies or similar tracking technologies<br>
+       · Contain advertising networks or analytics SDKs<br>
+       · Incorporate AI or machine learning services that process your data</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2>Device permissions</h2>
+    </div>
+    <p>The Application may request access to certain device features necessary for its core functionality. Any such access is used solely to provide the feature you request and is not stored, shared, or transmitted externally.</p>
+    <div class="note">Note: List any specific permissions your app requests here (e.g. camera, notifications). If your app requests no permissions, delete this section entirely before publishing.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2>Apple platform data</h2>
+    </div>
+    <p>When you download, install, or use the Application through the Apple App Store, Apple may collect certain information in accordance with Apple's own Privacy Policy and App Store Terms of Service. This data is collected and controlled by Apple, not by us. We encourage you to review Apple's privacy practices at <a href="https://apple.com/privacy" style="color: var(--accent);">apple.com/privacy</a>.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2>Data storage and security</h2>
+    </div>
+    <p>Any data you create or enter within the Application is stored locally on your device only. We do not have access to, and do not store, any such data on our servers. If you delete the Application, all locally stored data will be removed in accordance with Apple's standard app removal process.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <h2>Children's privacy</h2>
+    </div>
+    <p>The Application is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us at the address below and we will take steps to delete such information promptly.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">07</span>
+      <h2>Third-party links</h2>
+    </div>
+    <p>The Application may contain links to third-party websites or services. We are not responsible for the privacy practices of those third parties. We encourage you to review their privacy policies independently.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">08</span>
+      <h2>Changes to this policy</h2>
+    </div>
+    <p>We may update this Privacy Policy from time to time. When we do, we will revise the effective date at the top of this page. Continued use of the Application after any changes constitutes your acceptance of the updated policy.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">09</span>
+      <h2>Contact us</h2>
+    </div>
+    <p>If you have any questions or concerns about this Privacy Policy, please contact us:</p>
+    <div class="contact-block">
+      <p>Generabilis Intellectus LLC<br>
+      <a href="mailto:[contact@example.com]">[contact@example.com]</a></p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  &copy; 2026 Generabilis Intellectus LLC &nbsp;·&nbsp; All rights reserved
+</footer>
+
+</body>
+</html>
